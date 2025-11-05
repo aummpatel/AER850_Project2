@@ -158,7 +158,6 @@ print(f"Final Training loss: {train_loss:.4f}\n")
 
 # Training & Validation accuracy plot size
 plt.figure(figsize=(15, 5))
-
 # Plotting training & Validation accuracy
 plt.plot(history1.history['accuracy'], label="Training Accuracy")
 plt.plot(history1.history['val_accuracy'], label="Validation Accuracy")
@@ -169,7 +168,6 @@ plt.legend()
 
 # Training & Validation loss plot size
 plt.figure(figsize=(15, 5))
-
 # Plotting Training and Validation loss
 plt.plot(history1.history['loss'], label="Training Loss")
 plt.plot(history1.history['val_loss'], label="Validation Loss")
@@ -178,3 +176,6 @@ plt.xlabel("Epoch")
 plt.ylabel("Loss")
 plt.legend()
 
+# Save the model
+mdl1.save("Model_Final")
+print("Model saved successfully!")
